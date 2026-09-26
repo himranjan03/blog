@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Hub — Content editor</title><link rel="stylesheet" href="/admin.css" />
+  </head>
+  <body>
+    <main>
+      <a class="brand" href="/">← Personal Hub</a>
+      <section class="editor" id="login">
+        <p class="kicker">Private area</p><h1>Content editor</h1>
+        <p>Enter the secret configured as <code>ADMIN_TOKEN</code> on your server. It is kept only in this browser tab.</p>
+        <label>Admin token<input id="token" type="password" autocomplete="off" placeholder="Your admin token" /></label>
+        <button id="load">Unlock editor →</button><p class="message" id="login-message"></p>
+      </section>
+      <section class="editor hidden" id="workspace">
+        <div class="workspace-head"><div><p class="kicker">Editing content.json</p><h1>Make your updates.</h1></div><button class="secondary" id="lock">Lock</button></div>
+        <p>Update the JSON below. Save when you are done—your public site reads the changes immediately.</p>
+        <textarea id="content" spellcheck="false" aria-label="Website content JSON"></textarea>
+        <div class="actions"><button id="format" class="secondary">Format JSON</button><button id="save">Save changes →</button><span class="message" id="save-message"></span></div>
+      </section>
+    </main><script src="/admin.js"></script>
+  </body>
+</html>

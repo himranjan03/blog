@@ -1,0 +1,79 @@
+{
+  "profile": {
+    "name": "Himanshu Ranjan",
+    "role": "Senior Software Engineer & Product Builder",
+    "location": "Patna Bihar India · Building everywhere",
+    "email": "himanshuranjan3@gmail.com",
+    "availability": "Open to thoughtful opportunities",
+    "bio": "I design and ship dependable software with a bias for clarity, useful details, and exceptional product experiences.",
+    "about": "I am a software professional who enjoys turning ambiguous ideas into focused products. This space is where I share my work, writing, and the tools I maintain.",
+    "stats": [
+      { "value": "4+", "label": "Years building" },
+      { "value": "8", "label": "Projects shipped" },
+      { "value": "∞", "label": "Curiosity" }
+    ]
+  },
+  "socials": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/himanshu-ranjan-14a042203/", "icon": "linkedin" },
+    { "label": "GitHub", "url": "hhttps://github.com/himranjan03", "icon": "github" },
+    { "label": "Email", "url": "mailto:himanshuranjan3@gmail.com", "icon": "mail" }
+  ],
+  "experience": [
+    {
+      "period": "2023 — Present",
+      "role": "Senior Software Engineer",
+      "company": "Winjit Technologies",
+      "description": "Leading product engineering across modern web experiences, platform integrations, and developer workflows.",
+      "tags": ["Product engineering", "System design", "Mentorship"]
+    },
+    {
+      "period": "2020 — 2023",
+      "role": "Software Engineer",
+      "company": "Previous Company",
+      "description": "Built reliable customer-facing features and internal tools with a multidisciplinary product team.",
+      "tags": ["JavaScript", "APIs", "Cloud"]
+    }
+  ],
+  "posts": [
+    {
+      "id": "building-calm-software",
+      "title": "Building software that feels calm",
+      "excerpt": "A few practical principles for making complex products feel clear and capable.",
+      "date": "2026-09-18",
+      "readTime": "5 min read",
+      "tags": ["Product", "Engineering"],
+      "featured": true,
+      "content": "Good software does not need to announce its complexity. The most useful systems give people a clear next step, make their state visible, and recover gracefully when something goes wrong.\n\nFor me, calmness starts with restraint. Every control should earn its place, every status message should reduce uncertainty, and every path should leave room for people to change their minds.\n\nThis is not minimalism for its own sake. It is respect for attention."
+    },
+    {
+      "id": "release-notes-are-product",
+      "title": "Release notes are part of the product",
+      "excerpt": "Why a small, honest changelog can build more trust than a glossy launch page.",
+      "date": "2026-08-29",
+      "readTime": "3 min read",
+      "tags": ["Shipping", "Writing"],
+      "featured": false,
+      "content": "Release notes are a promise to the people who choose to use your work. They make progress legible and give users confidence that a product is alive.\n\nThe best notes are short, specific, and human. Say what changed, why it matters, and what you are still learning."
+    }
+  ],
+  "software": [
+    {
+      "name": "Project Atlas",
+      "description": "A concise description of your software product and the problem it solves.",
+      "version": "v2.4.0",
+      "released": "2026-09-14",
+      "status": "Current",
+      "links": { "website": "https://example.com", "github": "https://github.com/" },
+      "changes": ["Faster startup and refreshed dashboard", "New export workflow", "Improved accessibility across core screens"]
+    },
+    {
+      "name": "Studio CLI",
+      "description": "A developer tool that makes a recurring workflow quicker and more reliable.",
+      "version": "v1.8.2",
+      "released": "2026-08-03",
+      "status": "Maintained",
+      "links": { "website": "https://example.com", "github": "https://github.com/" },
+      "changes": ["Added configuration validation", "Fixed Windows path handling", "Clearer error messages"]
+    }
+  ]
+}

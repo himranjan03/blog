@@ -1,0 +1,19 @@
+{
+  "name": "personal-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-hosted personal portfolio, blog and software release hub",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
