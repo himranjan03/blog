@@ -72,7 +72,7 @@ async function initialize() {
     const posts = [...content.posts].sort((a, b) => new Date(b.date) - new Date(a.date));
     const shownPosts = posts.slice(0, 3);
     $('#post-count').textContent = `${posts.length} notes`;
-    $('#post-list').innerHTML = shownPosts.map(postCard).join('');
+    $('#post-list').innerHTML = shownPosts.length ? shownPosts.map(postCard).join('') : '<p class="empty-state">New writing is on the way. Check back soon.</p>';
     $('#show-all-posts').hidden = posts.length <= 3;
     $('#show-all-posts').addEventListener('click', (event) => {
       event.currentTarget.hidden = true;

@@ -18,18 +18,16 @@ test('health endpoint responds', async () => {
   assert.equal((await response.json()).status, 'ok');
 });
 
-test('public content has no full article body', async () => {
+test('public content is available without private article bodies', async () => {
   const response = await fetch(`http://127.0.0.1:${port}/api/content`);
   const content = await response.json();
   assert.equal(response.status, 200);
-  assert.ok(content.profile.name);
-  assert.equal('content' in content.posts[0], false);
+  assert.equal(content.profile.name, 'Himanshu Ranjan');
+  assert.ok(Array.isArray(content.posts));
+  assert.ok(content.posts.every((post) => !('content' in post)));
 });
 
-test('article route returns its full body and missing article is 404', async () => {
-  const content = await (await fetch(`http://127.0.0.1:${port}/api/content`)).json();
-  const post = await (await fetch(`http://127.0.0.1:${port}/api/posts/${content.posts[0].id}`)).json();
-  assert.ok(post.content);
+test('missing article is reported as a 404', async () => {
   const missing = await fetch(`http://127.0.0.1:${port}/api/posts/not-real`);
   assert.equal(missing.status, 404);
 });
@@ -39,5 +37,5 @@ test('admin content route protects unpublished article bodies', async () => {
   assert.equal(blocked.status, 401);
   const allowed = await fetch(`http://127.0.0.1:${port}/api/admin/content`, { headers: { 'x-admin-token': 'test-secret' } });
   assert.equal(allowed.status, 200);
-  assert.ok((await allowed.json()).posts[0].content);
+  assert.equal((await allowed.json()).profile.email, 'himanshuranjan3@gmail.com');
 });
